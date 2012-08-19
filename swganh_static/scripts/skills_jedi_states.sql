@@ -37,7 +37,11 @@ CREATE TABLE `skills_jedi_states` (
 
 LOCK TABLES `skills_jedi_states` WRITE;
 /*!40000 ALTER TABLE `skills_jedi_states` DISABLE KEYS */;
-INSERT INTO `skills_jedi_states` VALUES (0,'none'),(1,'forceSensitive'),(2,'jedi'),(4,'forceRankedLight'),(8,'forceRankedDark');
+INSERT INTO `skills_jedi_states` VALUES (0,'none'),
+(1,'forceSensitive'),
+(2,'jedi'),
+(4,'forceRankedLight'),
+(8,'forceRankedDark');
 /*!40000 ALTER TABLE `skills_jedi_states` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-18 21:34:21
+-- Dump completed on 2012-08-18 22:39:43

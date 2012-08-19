@@ -46,7 +46,24 @@ CREATE TABLE `starting_location` (
 
 LOCK TABLES `starting_location` WRITE;
 /*!40000 ALTER TABLE `starting_location` DISABLE KEYS */;
-INSERT INTO `starting_location` VALUES (1,'bestine',8,-1290.000000,0.000000,-3590.000000,'Bestine, Tatooine',3,180),(2,'mos_espa',8,-2902.000000,0.000000,2130.000000,'Mos Espa, Tatooine',3,180),(3,'mos_eisley',8,3528.000000,0.000000,-4804.000000,'Mos Eisley, Tatooine',3,180),(4,'mos_entha',8,1291.000000,0.000000,3138.000000,'Mos Entha, Tatooine',3,180),(5,'coronet',0,-137.000000,0.000000,-4723.000000,'Coronet, Corellia',3,180),(6,'tyrena',0,-5045.000000,0.000000,-2294.000000,'Tyrena, Corellia',3,180),(7,'kor_vella',0,-3138.000000,0.000000,2808.000000,'Kor Vella, Corellia',3,180),(8,'doaba_guerfel',0,3336.000000,0.000000,5525.000000,'Doaba Guerfel, Corellia',3,180),(9,'dearic',7,335.000000,0.000000,-2931.000000,'Dearic, Talus',3,180),(10,'nashal',7,4371.000000,0.000000,5165.000000,'Nashal, Talus',3,180),(11,'narmle',6,-5310.000000,0.000000,-2221.000000,'Narmle, Rori',3,180),(12,'restuss',6,5362.000000,0.000000,5663.000000,'Restuss, Rori',3,180),(13,'theed',5,-4856.000000,0.000000,4162.000000,'Theed, Naboo',3,180),(14,'moenia',5,4800.000000,0.000000,-4700.000000,'Moenia, Naboo',3,180),(15,'keren',5,1441.000000,0.000000,2771.000000,'Keren, Naboo',3,180),(16,'kaadara',5,5209.000000,0.000000,6677.000000,'Kaadara, Naboo',3,180),(17,'tutorial',41,0.000000,0.000000,0.000000,'Tutorial',3,180),(18,'default_location',41,27.400000,-42.000000,-161.100006,'Skipped Tutorial',3,180);
+INSERT INTO `starting_location` VALUES (1,'bestine',8,-1290.000000,0.000000,-3590.000000,'Bestine, Tatooine',3,180),
+(2,'mos_espa',8,-2902.000000,0.000000,2130.000000,'Mos Espa, Tatooine',3,180),
+(3,'mos_eisley',8,3528.000000,0.000000,-4804.000000,'Mos Eisley, Tatooine',3,180),
+(4,'mos_entha',8,1291.000000,0.000000,3138.000000,'Mos Entha, Tatooine',3,180),
+(5,'coronet',0,-137.000000,0.000000,-4723.000000,'Coronet, Corellia',3,180),
+(6,'tyrena',0,-5045.000000,0.000000,-2294.000000,'Tyrena, Corellia',3,180),
+(7,'kor_vella',0,-3138.000000,0.000000,2808.000000,'Kor Vella, Corellia',3,180),
+(8,'doaba_guerfel',0,3336.000000,0.000000,5525.000000,'Doaba Guerfel, Corellia',3,180),
+(9,'dearic',7,335.000000,0.000000,-2931.000000,'Dearic, Talus',3,180),
+(10,'nashal',7,4371.000000,0.000000,5165.000000,'Nashal, Talus',3,180),
+(11,'narmle',6,-5310.000000,0.000000,-2221.000000,'Narmle, Rori',3,180),
+(12,'restuss',6,5362.000000,0.000000,5663.000000,'Restuss, Rori',3,180),
+(13,'theed',5,-4856.000000,0.000000,4162.000000,'Theed, Naboo',3,180),
+(14,'moenia',5,4800.000000,0.000000,-4700.000000,'Moenia, Naboo',3,180),
+(15,'keren',5,1441.000000,0.000000,2771.000000,'Keren, Naboo',3,180),
+(16,'kaadara',5,5209.000000,0.000000,6677.000000,'Kaadara, Naboo',3,180),
+(17,'tutorial',41,0.000000,0.000000,0.000000,'Tutorial',3,180),
+(18,'default_location',41,27.400000,-42.000000,-161.100006,'Skipped Tutorial',3,180);
 /*!40000 ALTER TABLE `starting_location` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -59,4 +76,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-18 21:34:21
+-- Dump completed on 2012-08-18 22:39:43

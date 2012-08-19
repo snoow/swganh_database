@@ -37,7 +37,18 @@ CREATE TABLE `draft_lists_datatypes` (
 
 LOCK TABLES `draft_lists_datatypes` WRITE;
 /*!40000 ALTER TABLE `draft_lists_datatypes` DISABLE KEYS */;
-INSERT INTO `draft_lists_datatypes` VALUES (0,'Potency'),(1,'Cold Resistance'),(2,'Conductivity'),(3,'Decay Resistance'),(4,'Heat Resistance'),(5,'Flavor'),(6,'Mallebility'),(7,'Potential Energy'),(8,'Overall Quality'),(9,'Shock Resistance'),(10,'Unit Toughness'),(11,'Bulk');
+INSERT INTO `draft_lists_datatypes` VALUES (0,'Potency'),
+(1,'Cold Resistance'),
+(2,'Conductivity'),
+(3,'Decay Resistance'),
+(4,'Heat Resistance'),
+(5,'Flavor'),
+(6,'Mallebility'),
+(7,'Potential Energy'),
+(8,'Overall Quality'),
+(9,'Shock Resistance'),
+(10,'Unit Toughness'),
+(11,'Bulk');
 /*!40000 ALTER TABLE `draft_lists_datatypes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +61,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-18 21:34:20
+-- Dump completed on 2012-08-18 22:39:42

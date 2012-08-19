@@ -39,7 +39,22 @@ CREATE TABLE `holoemote` (
 
 LOCK TABLES `holoemote` WRITE;
 /*!40000 ALTER TABLE `holoemote` DISABLE KEYS */;
-INSERT INTO `holoemote` VALUES (1,0,0,'all'),(2,271843963,666,'champagne'),(3,1016410324,673,'beehive'),(4,1031957463,674,'rebel'),(5,1689610579,680,'imperial'),(6,1855276851,683,'blossom'),(7,2206631595,684,'hearts'),(8,2353730135,685,'hologlitter'),(9,2976881337,690,'technokitty'),(10,3751481095,692,'phonytail'),(11,3877296148,693,'haunted'),(12,3965423840,694,'sparky'),(13,3980353984,695,'bubblehead'),(14,3986851258,696,'holonotes'),(15,4220169270,699,'butterflies'),(16,4289766731,700,'brainstorm');
+INSERT INTO `holoemote` VALUES (1,0,0,'all'),
+(2,271843963,666,'champagne'),
+(3,1016410324,673,'beehive'),
+(4,1031957463,674,'rebel'),
+(5,1689610579,680,'imperial'),
+(6,1855276851,683,'blossom'),
+(7,2206631595,684,'hearts'),
+(8,2353730135,685,'hologlitter'),
+(9,2976881337,690,'technokitty'),
+(10,3751481095,692,'phonytail'),
+(11,3877296148,693,'haunted'),
+(12,3965423840,694,'sparky'),
+(13,3980353984,695,'bubblehead'),
+(14,3986851258,696,'holonotes'),
+(15,4220169270,699,'butterflies'),
+(16,4289766731,700,'brainstorm');
 /*!40000 ALTER TABLE `holoemote` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +67,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-18 21:34:20
+-- Dump completed on 2012-08-18 22:39:42

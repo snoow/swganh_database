@@ -37,7 +37,29 @@ CREATE TABLE `npc_mood_animations` (
 
 LOCK TABLES `npc_mood_animations` WRITE;
 /*!40000 ALTER TABLE `npc_mood_animations` DISABLE KEYS */;
-INSERT INTO `npc_mood_animations` VALUES (1,'bored'),(2,'calm'),(3,'conversation'),(4,'default'),(5,'explain'),(6,'none'),(7,'neutral'),(8,'npc_accusing'),(9,'npc_angry'),(10,'npc_consoling'),(11,'npc_dead_01'),(12,'npc_dead_02'),(13,'npc_dead_03'),(14,'npc_imperial'),(15,'npc_sad'),(16,'npc_sitting_chair'),(17,'npc_sitting_ground'),(18,'npc_sitting_table'),(19,'npc_sitting_table_eating'),(20,'npc_standing_drinking'),(21,'npc_use_console_ag'),(22,'npc_use_terminal_high'),(23,'npc_use_terminal_low');
+INSERT INTO `npc_mood_animations` VALUES (1,'bored'),
+(2,'calm'),
+(3,'conversation'),
+(4,'default'),
+(5,'explain'),
+(6,'none'),
+(7,'neutral'),
+(8,'npc_accusing'),
+(9,'npc_angry'),
+(10,'npc_consoling'),
+(11,'npc_dead_01'),
+(12,'npc_dead_02'),
+(13,'npc_dead_03'),
+(14,'npc_imperial'),
+(15,'npc_sad'),
+(16,'npc_sitting_chair'),
+(17,'npc_sitting_ground'),
+(18,'npc_sitting_table'),
+(19,'npc_sitting_table_eating'),
+(20,'npc_standing_drinking'),
+(21,'npc_use_console_ag'),
+(22,'npc_use_terminal_high'),
+(23,'npc_use_terminal_low');
 /*!40000 ALTER TABLE `npc_mood_animations` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +72,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-18 21:34:20
+-- Dump completed on 2012-08-18 22:39:42

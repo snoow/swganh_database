@@ -39,7 +39,10 @@ CREATE TABLE `shuttle_types` (
 
 LOCK TABLES `shuttle_types` WRITE;
 /*!40000 ALTER TABLE `shuttle_types` DISABLE KEYS */;
-INSERT INTO `shuttle_types` VALUES (1,'object/creature/npc/theme_park/shared_player_shuttle.iff','shuttle','theme_park_name'),(2,'object/creature/npc/theme_park/shared_lambda_shuttle.iff','shuttle','theme_park_name'),(3,'object/creature/npc/theme_park/shared_player_transport.iff','transport','theme_park_name'),(4,'object/creature/npc/theme_park/shared_player_transport_theed_hangar.iff','transport','theme_park_name');
+INSERT INTO `shuttle_types` VALUES (1,'object/creature/npc/theme_park/shared_player_shuttle.iff','shuttle','theme_park_name'),
+(2,'object/creature/npc/theme_park/shared_lambda_shuttle.iff','shuttle','theme_park_name'),
+(3,'object/creature/npc/theme_park/shared_player_transport.iff','transport','theme_park_name'),
+(4,'object/creature/npc/theme_park/shared_player_transport_theed_hangar.iff','transport','theme_park_name');
 /*!40000 ALTER TABLE `shuttle_types` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-18 21:34:20
+-- Dump completed on 2012-08-18 22:39:43

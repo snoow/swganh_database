@@ -37,7 +37,15 @@ CREATE TABLE `name_reserved` (
 
 LOCK TABLES `name_reserved` WRITE;
 /*!40000 ALTER TABLE `name_reserved` DISABLE KEYS */;
-INSERT INTO `name_reserved` VALUES (1,'Luke'),(2,'Darth'),(3,'Vader'),(4,'Leia'),(5,'Chewbacca'),(6,'Yoda'),(7,'Emperor'),(8,'stormtrooper'),(9,'TK');
+INSERT INTO `name_reserved` VALUES (1,'Luke'),
+(2,'Darth'),
+(3,'Vader'),
+(4,'Leia'),
+(5,'Chewbacca'),
+(6,'Yoda'),
+(7,'Emperor'),
+(8,'stormtrooper'),
+(9,'TK');
 /*!40000 ALTER TABLE `name_reserved` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-18 21:34:20
+-- Dump completed on 2012-08-18 22:39:42

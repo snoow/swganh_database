@@ -38,7 +38,14 @@ CREATE TABLE `badge_types` (
 
 LOCK TABLES `badge_types` WRITE;
 /*!40000 ALTER TABLE `badge_types` DISABLE KEYS */;
-INSERT INTO `badge_types` VALUES (1,'accumulation'),(7,'content'),(6,'events'),(4,'exploration_dangerous'),(5,'exploration_easy'),(3,'exploration_jedi'),(2,'interest'),(8,'master');
+INSERT INTO `badge_types` VALUES (1,'accumulation'),
+(7,'content'),
+(6,'events'),
+(4,'exploration_dangerous'),
+(5,'exploration_easy'),
+(3,'exploration_jedi'),
+(2,'interest'),
+(8,'master');
 /*!40000 ALTER TABLE `badge_types` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-18 21:34:19
+-- Dump completed on 2012-08-18 22:39:41

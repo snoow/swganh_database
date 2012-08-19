@@ -40,7 +40,36 @@ CREATE TABLE `item_families` (
 
 LOCK TABLES `item_families` WRITE;
 /*!40000 ALTER TABLE `item_families` DISABLE KEYS */;
-INSERT INTO `item_families` VALUES (1,'survey_tool',25,2775),(2,'travel_ticket',25,2775),(3,'crafting_tool',25,2775),(4,'crafting_station',25,2775),(5,'furniture',25,2781),(6,'food',25,2776),(7,'wearable',25,2779),(8,'manufacture schematic',25,2772),(9,'generic',25,2775),(10,'weapon',25,2782),(11,'instrument',25,2775),(12,'bug_jar',25,2772),(13,'component',25,2775),(14,'crafting',25,2772),(15,'deed',0,0),(16,'dice',25,2775),(17,'droid',25,2777),(18,'droid_battery',25,2777),(19,'firework',25,2775),(20,'fishing',25,2775),(21,'item',25,2772),(22,'medicine',25,2780),(23,'mission',25,2772),(24,'powerup',25,2782),(25,'scout',25,2772),(26,'ship',25,2772),(27,'slicing',25,2775),(28,'parrot_cage',25,2775),(29,'hopper',25,2772),(30,'crate',0,0);
+INSERT INTO `item_families` VALUES (1,'survey_tool',25,2775),
+(2,'travel_ticket',25,2775),
+(3,'crafting_tool',25,2775),
+(4,'crafting_station',25,2775),
+(5,'furniture',25,2781),
+(6,'food',25,2776),
+(7,'wearable',25,2779),
+(8,'manufacture schematic',25,2772),
+(9,'generic',25,2775),
+(10,'weapon',25,2782),
+(11,'instrument',25,2775),
+(12,'bug_jar',25,2772),
+(13,'component',25,2775),
+(14,'crafting',25,2772),
+(15,'deed',0,0),
+(16,'dice',25,2775),
+(17,'droid',25,2777),
+(18,'droid_battery',25,2777),
+(19,'firework',25,2775),
+(20,'fishing',25,2775),
+(21,'item',25,2772),
+(22,'medicine',25,2780),
+(23,'mission',25,2772),
+(24,'powerup',25,2782),
+(25,'scout',25,2772),
+(26,'ship',25,2772),
+(27,'slicing',25,2775),
+(28,'parrot_cage',25,2775),
+(29,'hopper',25,2772),
+(30,'crate',0,0);
 /*!40000 ALTER TABLE `item_families` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +82,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-18 21:34:20
+-- Dump completed on 2012-08-18 22:39:42

@@ -40,7 +40,20 @@ CREATE TABLE `inventory_types` (
 
 LOCK TABLES `inventory_types` WRITE;
 /*!40000 ALTER TABLE `inventory_types` DISABLE KEYS */;
-INSERT INTO `inventory_types` VALUES (1,'object/tangible/inventory/shared_character_inventory.iff',80,'inventory','item_n'),(2,'object/tangible/inventory/shared_creature_inventory.iff',50,'inventory','item_n'),(3,'object/tangible/inventory/shared_creature_inventory_1.iff',50,'inventory','item_n'),(4,'object/tangible/inventory/shared_creature_inventory_2.iff',50,'inventory','item_n'),(5,'object/tangible/inventory/shared_creature_inventory_3.iff',50,'inventory','item_n'),(6,'object/tangible/inventory/shared_creature_inventory_4.iff',50,'inventory','item_n'),(7,'object/tangible/inventory/shared_creature_inventory_5.iff',50,'inventory','item_n'),(8,'object/tangible/inventory/shared_creature_inventory_6.iff',50,'inventory','item_n'),(9,'object/tangible/inventory/shared_vendor_inventory.iff',50,'inventory','item_n'),(10,'object/tangible/inventory/shared_lightsaber_inventory_training.iff',50,'inventory','item_n'),(11,'object/tangible/inventory/shared_lightsaber_inventory_1.iff',50,'inventory','item_n'),(12,'object/tangible/inventory/shared_lightsaber_inventory_2.iff',50,'inventory','item_n'),(13,'object/tangible/inventory/shared_lightsaber_inventory_3.iff',50,'inventory','item_n'),(14,'object/tangible/inventory/shared_lightsaber_inventory_4.iff',50,'inventory','item_n');
+INSERT INTO `inventory_types` VALUES (1,'object/tangible/inventory/shared_character_inventory.iff',80,'inventory','item_n'),
+(2,'object/tangible/inventory/shared_creature_inventory.iff',50,'inventory','item_n'),
+(3,'object/tangible/inventory/shared_creature_inventory_1.iff',50,'inventory','item_n'),
+(4,'object/tangible/inventory/shared_creature_inventory_2.iff',50,'inventory','item_n'),
+(5,'object/tangible/inventory/shared_creature_inventory_3.iff',50,'inventory','item_n'),
+(6,'object/tangible/inventory/shared_creature_inventory_4.iff',50,'inventory','item_n'),
+(7,'object/tangible/inventory/shared_creature_inventory_5.iff',50,'inventory','item_n'),
+(8,'object/tangible/inventory/shared_creature_inventory_6.iff',50,'inventory','item_n'),
+(9,'object/tangible/inventory/shared_vendor_inventory.iff',50,'inventory','item_n'),
+(10,'object/tangible/inventory/shared_lightsaber_inventory_training.iff',50,'inventory','item_n'),
+(11,'object/tangible/inventory/shared_lightsaber_inventory_1.iff',50,'inventory','item_n'),
+(12,'object/tangible/inventory/shared_lightsaber_inventory_2.iff',50,'inventory','item_n'),
+(13,'object/tangible/inventory/shared_lightsaber_inventory_3.iff',50,'inventory','item_n'),
+(14,'object/tangible/inventory/shared_lightsaber_inventory_4.iff',50,'inventory','item_n');
 /*!40000 ALTER TABLE `inventory_types` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +66,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-18 21:34:20
+-- Dump completed on 2012-08-18 22:39:42

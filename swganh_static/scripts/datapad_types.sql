@@ -40,7 +40,13 @@ CREATE TABLE `datapad_types` (
 
 LOCK TABLES `datapad_types` WRITE;
 /*!40000 ALTER TABLE `datapad_types` DISABLE KEYS */;
-INSERT INTO `datapad_types` VALUES (1,'object/tangible/datapad/shared_character_datapad.iff','datapad','item_n'),(2,'object/tangible/datapad/shared_droid_datapad_1.iff','datapad','item_n'),(3,'object/tangible/datapad/shared_droid_datapad_2.iff','datapad','item_n'),(4,'object/tangible/datapad/shared_droid_datapad_3.iff','datapad','item_n'),(5,'object/tangible/datapad/shared_droid_datapad_4.iff','datapad','item_n'),(6,'object/tangible/datapad/shared_droid_datapad_5.iff','datapad','item_n'),(7,'object/tangible/datapad/shared_droid_datapad_6.iff','datapad','item_n');
+INSERT INTO `datapad_types` VALUES (1,'object/tangible/datapad/shared_character_datapad.iff','datapad','item_n'),
+(2,'object/tangible/datapad/shared_droid_datapad_1.iff','datapad','item_n'),
+(3,'object/tangible/datapad/shared_droid_datapad_2.iff','datapad','item_n'),
+(4,'object/tangible/datapad/shared_droid_datapad_3.iff','datapad','item_n'),
+(5,'object/tangible/datapad/shared_droid_datapad_4.iff','datapad','item_n'),
+(6,'object/tangible/datapad/shared_droid_datapad_5.iff','datapad','item_n'),
+(7,'object/tangible/datapad/shared_droid_datapad_6.iff','datapad','item_n');
 /*!40000 ALTER TABLE `datapad_types` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-18 21:34:19
+-- Dump completed on 2012-08-18 22:39:42

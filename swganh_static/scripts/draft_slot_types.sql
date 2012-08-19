@@ -37,7 +37,9 @@ CREATE TABLE `draft_slot_types` (
 
 LOCK TABLES `draft_slot_types` WRITE;
 /*!40000 ALTER TABLE `draft_slot_types` DISABLE KEYS */;
-INSERT INTO `draft_slot_types` VALUES (2,'Identical Component'),(4,'Resource'),(5,'Similar Components');
+INSERT INTO `draft_slot_types` VALUES (2,'Identical Component'),
+(4,'Resource'),
+(5,'Similar Components');
 /*!40000 ALTER TABLE `draft_slot_types` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-18 21:34:20
+-- Dump completed on 2012-08-18 22:39:42

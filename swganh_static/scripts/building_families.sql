@@ -37,7 +37,19 @@ CREATE TABLE `building_families` (
 
 LOCK TABLES `building_families` WRITE;
 /*!40000 ALTER TABLE `building_families` DISABLE KEYS */;
-INSERT INTO `building_families` VALUES (0,'none'),(1,'parking garage'),(2,'cantina'),(3,'guildhall'),(4,'hotel'),(5,'medicalcenter'),(6,'shuttleport'),(7,'starport'),(8,'themepark'),(9,'theater'),(10,'salon'),(11,'cloning facility'),(12,'player structure');
+INSERT INTO `building_families` VALUES (0,'none'),
+(1,'parking garage'),
+(2,'cantina'),
+(3,'guildhall'),
+(4,'hotel'),
+(5,'medicalcenter'),
+(6,'shuttleport'),
+(7,'starport'),
+(8,'themepark'),
+(9,'theater'),
+(10,'salon'),
+(11,'cloning facility'),
+(12,'player structure');
 /*!40000 ALTER TABLE `building_families` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +62,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-18 21:34:19
+-- Dump completed on 2012-08-18 22:39:41

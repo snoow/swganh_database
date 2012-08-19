@@ -37,7 +37,17 @@ CREATE TABLE `persistent_npc_families` (
 
 LOCK TABLES `persistent_npc_families` WRITE;
 /*!40000 ALTER TABLE `persistent_npc_families` DISABLE KEYS */;
-INSERT INTO `persistent_npc_families` VALUES (1,'trainers'),(2,'fillers'),(3,'quest_givers'),(4,'junk_dealers'),(5,'chassis_dealers'),(6,'recruiters'),(7,'attackable_objects'),(8,'attackable_creatures'),(9,'natural_lairs'),(10,'mission_lairs'),(11,'invisible_lairs');
+INSERT INTO `persistent_npc_families` VALUES (1,'trainers'),
+(2,'fillers'),
+(3,'quest_givers'),
+(4,'junk_dealers'),
+(5,'chassis_dealers'),
+(6,'recruiters'),
+(7,'attackable_objects'),
+(8,'attackable_creatures'),
+(9,'natural_lairs'),
+(10,'mission_lairs'),
+(11,'invisible_lairs');
 /*!40000 ALTER TABLE `persistent_npc_families` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +60,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-18 21:34:20
+-- Dump completed on 2012-08-18 22:39:42

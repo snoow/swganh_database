@@ -37,7 +37,37 @@ CREATE TABLE `csr_categories` (
 
 LOCK TABLES `csr_categories` WRITE;
 /*!40000 ALTER TABLE `csr_categories` DISABLE KEYS */;
-INSERT INTO `csr_categories` VALUES (1,'Bazaar'),(2,'Badges'),(3,'Bank'),(4,'Chat'),(5,'Combat'),(6,'Crafting'),(7,'Dancing'),(8,'Datapad'),(9,'Elevators'),(10,'Faction'),(11,'Group'),(12,'Guild'),(13,'Harvesting'),(14,'Inventory'),(15,'Item'),(16,'Looting'),(17,'Misc'),(18,'Music'),(19,'NPC'),(20,'Profession'),(21,'Sampling'),(22,'Server Administration'),(23,'Structures'),(24,'Survey'),(25,'System Messages'),(26,'Trading'),(27,'Trainers'),(28,'Travel'),(29,'UI'),(30,'Waypoints'),(31,'Weather');
+INSERT INTO `csr_categories` VALUES (1,'Bazaar'),
+(2,'Badges'),
+(3,'Bank'),
+(4,'Chat'),
+(5,'Combat'),
+(6,'Crafting'),
+(7,'Dancing'),
+(8,'Datapad'),
+(9,'Elevators'),
+(10,'Faction'),
+(11,'Group'),
+(12,'Guild'),
+(13,'Harvesting'),
+(14,'Inventory'),
+(15,'Item'),
+(16,'Looting'),
+(17,'Misc'),
+(18,'Music'),
+(19,'NPC'),
+(20,'Profession'),
+(21,'Sampling'),
+(22,'Server Administration'),
+(23,'Structures'),
+(24,'Survey'),
+(25,'System Messages'),
+(26,'Trading'),
+(27,'Trainers'),
+(28,'Travel'),
+(29,'UI'),
+(30,'Waypoints'),
+(31,'Weather');
 /*!40000 ALTER TABLE `csr_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +80,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-18 21:34:19
+-- Dump completed on 2012-08-18 22:39:42

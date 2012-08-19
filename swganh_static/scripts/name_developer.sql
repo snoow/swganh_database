@@ -37,7 +37,23 @@ CREATE TABLE `name_developer` (
 
 LOCK TABLES `name_developer` WRITE;
 /*!40000 ALTER TABLE `name_developer` DISABLE KEYS */;
-INSERT INTO `name_developer` VALUES (1,'snow'),(2,'htx'),(3,'wookiee'),(4,'jack'),(5,'rouse'),(6,'ketusringa'),(7,'yosh'),(8,'jay'),(9,'schmunzel'),(10,'ready'),(11,'spety'),(12,'narook'),(13,'tmr'),(14,'o_0'),(15,'starko'),(16,'cieto'),(18,'pope');
+INSERT INTO `name_developer` VALUES (1,'snow'),
+(2,'htx'),
+(3,'wookiee'),
+(4,'jack'),
+(5,'rouse'),
+(6,'ketusringa'),
+(7,'yosh'),
+(8,'jay'),
+(9,'schmunzel'),
+(10,'ready'),
+(11,'spety'),
+(12,'narook'),
+(13,'tmr'),
+(14,'o_0'),
+(15,'starko'),
+(16,'cieto'),
+(18,'pope');
 /*!40000 ALTER TABLE `name_developer` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +66,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-18 21:34:20
+-- Dump completed on 2012-08-18 22:39:42

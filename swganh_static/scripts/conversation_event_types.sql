@@ -37,7 +37,11 @@ CREATE TABLE `conversation_event_types` (
 
 LOCK TABLES `conversation_event_types` WRITE;
 /*!40000 ALTER TABLE `conversation_event_types` DISABLE KEYS */;
-INSERT INTO `conversation_event_types` VALUES (0,'none'),(1,'learn skill'),(2,'select_learn_skill'),(3,'prepare_selection'),(4,'tutorial_special_event');
+INSERT INTO `conversation_event_types` VALUES (0,'none'),
+(1,'learn skill'),
+(2,'select_learn_skill'),
+(3,'prepare_selection'),
+(4,'tutorial_special_event');
 /*!40000 ALTER TABLE `conversation_event_types` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-18 21:34:19
+-- Dump completed on 2012-08-18 22:39:41

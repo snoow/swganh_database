@@ -39,7 +39,16 @@ CREATE TABLE `weapon_groups` (
 
 LOCK TABLES `weapon_groups` WRITE;
 /*!40000 ALTER TABLE `weapon_groups` DISABLE KEYS */;
-INSERT INTO `weapon_groups` VALUES (1,'unarmed',1136984016,'melee'),(2,'1h',1136984016,'melee'),(4,'2h',1136984016,'melee'),(8,'polearm',1136984016,'melee'),(16,'rifle',1349426508,'shoot'),(32,'pistol',1349426508,'shoot'),(64,'carbine',1349426508,'shoot'),(128,'flamethrower',1349426508,'shoot'),(256,'saber',1136984016,'melee'),(512,'launcher',1349426508,'shoot');
+INSERT INTO `weapon_groups` VALUES (1,'unarmed',1136984016,'melee'),
+(2,'1h',1136984016,'melee'),
+(4,'2h',1136984016,'melee'),
+(8,'polearm',1136984016,'melee'),
+(16,'rifle',1349426508,'shoot'),
+(32,'pistol',1349426508,'shoot'),
+(64,'carbine',1349426508,'shoot'),
+(128,'flamethrower',1349426508,'shoot'),
+(256,'saber',1136984016,'melee'),
+(512,'launcher',1349426508,'shoot');
 /*!40000 ALTER TABLE `weapon_groups` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +61,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-18 21:34:21
+-- Dump completed on 2012-08-18 22:39:44

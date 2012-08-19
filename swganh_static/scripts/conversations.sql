@@ -37,7 +37,46 @@ CREATE TABLE `conversations` (
 
 LOCK TABLES `conversations` WRITE;
 /*!40000 ALTER TABLE `conversations` DISABLE KEYS */;
-INSERT INTO `conversations` VALUES (1,'brawler trainer dialog'),(2,'entertainer trainer dialog'),(3,'scout trainer dialog'),(4,'medic trainer dialog'),(5,'artisan trainer dialog'),(6,'marksman trainer dialog'),(7,'rifleman trainer dialog'),(8,'pistol trainer dialog'),(9,'carbine trainer dialog'),(10,'unarmed trainer dialog'),(11,'fencer trainer dialog'),(12,'swordman trainer dialog'),(13,'polearm trainer dialog'),(14,'dancer trainer dialog'),(15,'musician trainer dialog'),(16,'doctor trainer dialog'),(17,'ranger trainer dialog'),(18,'creature handler dialog'),(19,'bioengineer trainer dialog'),(20,'armorsmith trainer dialog'),(21,'weaponsmith trainer dialog'),(22,'chef trainer dialog'),(23,'tailor trainer dialog'),(24,'architect trainer dialog'),(25,'droidengineer trainer dialog'),(26,'merchant trainer dialog'),(27,'smuggler trainer dialog'),(28,'bountyhunter trainer dialog'),(29,'commando trainer dialog'),(30,'combat medic trainer dialog'),(31,'image designer trainer dialog'),(32,'squad leader trainer dialog'),(33,'politician trainer dialog'),(34,'tutorial item room imperial officer dialog'),(35,'tutorial bank and bazzar room imperial officer dialog'),(36,'tutorial cloning and insurance room droid dialog'),(37,'tutorial covard imperial officer room dialog'),(38,'tutorial imperial officer with trainer room dialog'),(39,'tutorial imperial officer in mission terminal room dialog'),(40,'tutorial quartermaster room dialog');
+INSERT INTO `conversations` VALUES (1,'brawler trainer dialog'),
+(2,'entertainer trainer dialog'),
+(3,'scout trainer dialog'),
+(4,'medic trainer dialog'),
+(5,'artisan trainer dialog'),
+(6,'marksman trainer dialog'),
+(7,'rifleman trainer dialog'),
+(8,'pistol trainer dialog'),
+(9,'carbine trainer dialog'),
+(10,'unarmed trainer dialog'),
+(11,'fencer trainer dialog'),
+(12,'swordman trainer dialog'),
+(13,'polearm trainer dialog'),
+(14,'dancer trainer dialog'),
+(15,'musician trainer dialog'),
+(16,'doctor trainer dialog'),
+(17,'ranger trainer dialog'),
+(18,'creature handler dialog'),
+(19,'bioengineer trainer dialog'),
+(20,'armorsmith trainer dialog'),
+(21,'weaponsmith trainer dialog'),
+(22,'chef trainer dialog'),
+(23,'tailor trainer dialog'),
+(24,'architect trainer dialog'),
+(25,'droidengineer trainer dialog'),
+(26,'merchant trainer dialog'),
+(27,'smuggler trainer dialog'),
+(28,'bountyhunter trainer dialog'),
+(29,'commando trainer dialog'),
+(30,'combat medic trainer dialog'),
+(31,'image designer trainer dialog'),
+(32,'squad leader trainer dialog'),
+(33,'politician trainer dialog'),
+(34,'tutorial item room imperial officer dialog'),
+(35,'tutorial bank and bazzar room imperial officer dialog'),
+(36,'tutorial cloning and insurance room droid dialog'),
+(37,'tutorial covard imperial officer room dialog'),
+(38,'tutorial imperial officer with trainer room dialog'),
+(39,'tutorial imperial officer in mission terminal room dialog'),
+(40,'tutorial quartermaster room dialog');
 /*!40000 ALTER TABLE `conversations` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +89,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-18 21:34:19
+-- Dump completed on 2012-08-18 22:39:41
