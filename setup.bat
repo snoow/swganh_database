@@ -70,8 +70,8 @@ TITLE %title%
 	ECHO.                                   ^|
 	ECHO.   (2) swganh_galaxy               ^|  (c) Complete Database Backup
 	ECHO.   (3) swganh_galaxy_manager       ^|  (d) Delete Databases
-	ECHO.   (4) swganh_static               ^|  (e) Create new Galaxy
-	ECHO.   (5) swganh_astromech            ^|  (f) ----
+	ECHO.   (4) swganh_astromech            ^|  (e) Create new Galaxy
+	ECHO.   (5) swganh_static               ^|  (f) ----
 	ECHO.                                   ^|  (g) ----
 	ECHO.      Server Configuration         ^|
 	ECHO.                                   ^|               Help
@@ -236,6 +236,12 @@ GOTO:MainMenu
 	GOTO:MainMenu
 	
 :SchemaSWGANH_GALAXY
+	CALL:ScreenClear
+	CALL:ShortMenu
+	ECHO.                   Installing *swganh_galaxy* Database
+	ECHO.
+	ECHO.                              Please Wait
+	ECHO.
 
 	:: Create the schema
 	
@@ -266,6 +272,12 @@ GOTO:MainMenu
 	GOTO:MainMenu
 	
 :SchemaSWGANH_GALAXY_MANAGER
+	CALL:ScreenClear
+	CALL:ShortMenu
+	ECHO.                Installing *swganh_galaxy_manager* Database
+	ECHO.
+	ECHO.                              Please Wait
+	ECHO.
 
 	:: Create the schema
 	
@@ -295,6 +307,12 @@ GOTO:MainMenu
 	GOTO:MainMenu
 
 :SchemaSWGANH_STATIC
+	CALL:ScreenClear
+	CALL:ShortMenu
+	ECHO.                   Installing *swganh_static* Database
+	ECHO.
+	ECHO.                              Please Wait
+	ECHO.
 
 	:: Create the schema
 	
@@ -324,6 +342,12 @@ GOTO:MainMenu
 	GOTO:MainMenu
 	
 :SchemaSWGANH_ASTROMECH
+	CALL:ScreenClear
+	CALL:ShortMenu
+	ECHO.                Installing *swganh_astromech* Database
+	ECHO.
+	ECHO.                              Please Wait
+	ECHO.
 
 	:: Create the schema
 	
@@ -393,7 +417,7 @@ GOTO:MainMenu
 
 	:: Backup *ALL* Databases
 	
-	mysqldump --password=%db_pass% --host=%db_host% --user=%db_user% --databases galaxy galaxy_manager swganh_astromech swganh_logs --create-options --extended-insert --routines --dump-date --triggers --comments > swganh_complete.bak
+	mysqldump --password=%db_pass% --host=%db_host% --user=%db_user% --databases swganh_galaxy swganh_galaxy_manager swganh_astromech swganh_static --create-options --extended-insert --routines --dump-date --triggers --comments > swganh_complete.bak
 
 	ECHO.                           Backup Complete
 	ECHO.
@@ -412,7 +436,7 @@ GOTO:MainMenu
 
 	:: Backup account data
 	
-	mysqldump --password=%db_pass% --host=%db_host% --user=%db_user% galaxy account --extended-insert --create-options --dump-date --triggers --comments -r swganh_accounts.bak
+	mysqldump --password=%db_pass% --host=%db_host% --user=%db_user% swganh_galaxy account --extended-insert --create-options --dump-date --triggers --comments -r swganh_accounts.bak
 
 	ECHO.                           Backup Complete
 	ECHO.
@@ -448,12 +472,12 @@ GOTO:MainMenu
 	CALL:ShortMenu
 	
 	ECHO. Project Base: %PROJECT_BASE%
-ECHO. Install Type Selected: %INSTALL_TYPE%
-ECHO. Backup Type Selected: %BACKUP_TYPE%
-ECHO.
-ECHO. User: %db_user%
-ECHO. Password: %db_pass%
-ECHO. IP: %db_host%
+	ECHO. Install Type Selected: %INSTALL_TYPE%
+	ECHO. Backup Type Selected: %BACKUP_TYPE%
+	ECHO.
+	ECHO. User: %db_user%
+	ECHO. Password: %db_pass%
+	ECHO. IP: %db_host%
 	CALL:sleep 5
 	GOTO:MainMenu
 
@@ -539,7 +563,7 @@ ECHO. IP: %db_host%
 :ShortMenu
 	CLS
 	ECHO. ----------------------------------------------------------------------
-	ECHO.  SWGANH Database Install Script                              (v.0.03)
+	ECHO.  SWGANH Database Install Script                              (v.0.05)
 	ECHO. ----------------------------------------------------------------------
 	ECHO.  DB IP: %db_host%     DB Username: %db_user%    DB Password: %db_pass%
 	ECHO. ----------------------------------------------------------------------
