@@ -42,17 +42,54 @@ TITLE %title%
 
 @ECHO OFF
 	CALL:READ_CFG
-	CALL:ScreenIntro
 	CALL:MainMenu
 
 	::
 	:: Functions
-	::
+	::	
 
 :READ_CFG
 	FOR /F "tokens=2 delims==" %%a IN ('find "username" ^< setup.cfg') DO SET db_user=%%a
 	FOR /F "tokens=2 delims==" %%a IN ('find "password" ^< setup.cfg') DO SET db_pass=%%a
 	FOR /F "tokens=2 delims==" %%a IN ('find "host" ^< setup.cfg') DO SET db_host=%%a
+	CLS
+	ECHO.
+	ECHO.                MIIIIIIIIIIIINNNNNNNNNNNNNNNDIIIIIIIINNN
+	ECHO.                MIIIIIIIIIIINNNNNNNNNNNNNNNNNNNNNIIIINNN
+	ECHO.                MIIIIIIIIONNNNNNNNN,,NNNNNNNNNNNNNNNINNN
+	ECHO.                MIIIIIIINNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+	ECHO.                MIIIIIINNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+	ECHO.                MIIIIIDNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+	ECHO.                MIIIIINNNNNNN=...............NNNNNNNNNNN
+	ECHO.                MIIIIIINNNN8NNNNN......N+NNNNNN...DNNNNN
+	ECHO.                MIIIIIIONNNNNNNN~,......DNNNNNNNNN..NNNN
+	ECHO.                MIIIIIINNNNNNNN.N....... NNNNNNNNN....NN
+	ECHO.                MIIIIINNNNNNN$.NN .........NNNNNN.....NN
+	ECHO.                MIIINNNNNNNN.~NN8DNZ..................NN
+	ECHO.                MINNNNNNNNN$NNNNNNNN............MN....NN
+	ECHO.                MIINNNNNNNNNNNNN...:NN...........MN...NN
+	ECHO.                MIINNNNNNNNNNNN,..... N..........N....NN
+	ECHO.                MIINNNNNNNNNNNN.........D.............NN
+	ECHO.                MIINNNNNNNNNNN8.......................NN
+	ECHO.                MIINNNNNNNNNN ........................NN
+	ECHO.                MIINNNNNNNND...NNN..................DNNN
+	ECHO.                M8N80NNNNNNM...NNNNN................~.NN
+	ECHO.                M0000NNNNNN ..NNNNNNN.................NN
+	ECHO.                M0NNNNNNNNNN..NNNNNNN . NNN .........=NN
+	ECHO.                M000NNNNNNNNN.NNNNNNNN..NNNN........NNNN
+	ECHO.                M00NNNNNNNNNNNNNNNNNN7.............NNNNN
+	ECHO.                M0000NNNNNNNNNNNNNNNNNN?.........NNNNNNN
+	ECHO.                M0000NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+	ECHO.                M00000000NNNNNNNNNNN..D..N..NDN.:NNM..NN
+	ECHO.                M00000000NNNNNNNN7,NN.N..N.N,,,8.Z.:NNNN
+	ECHO.                M00000000NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+	ECHO.                M88888888888888888888888888888888888888N
+	ECHO.
+	ECHO.                     SWG:ANH - Database Installer
+	ECHO.
+	ECHO.
+	CALL:sleep 2
+	GOTO:EOF
 
 :MainMenu
 	CLS
@@ -65,19 +102,19 @@ TITLE %title%
 	ECHO.          Database Setup           ^|       Database Maintenance
 	ECHO.                                   ^|
 	ECHO.   (1) Complete DB Install         ^|  (a) Backup accounts table
-	ECHO.                                   ^|  (b) ----
+	ECHO.                                   ^|  (b) 
 	ECHO.       Individual DB Setup         ^|
 	ECHO.                                   ^|
-	ECHO.   (2) swganh_galaxy               ^|  (c) Complete Database Backup
-	ECHO.   (3) swganh_galaxy_manager       ^|  (d) Delete Databases
-	ECHO.   (4) swganh_astromech            ^|  (e) Create new Galaxy
-	ECHO.   (5) swganh_static               ^|  (f) ----
-	ECHO.                                   ^|  (g) ----
+	ECHO.   (2) swganh_static               ^|  (c) Complete Database Backup
+	ECHO.   (3) swganh_astromech            ^|  (d) Delete Databases
+	ECHO.   (4) swganh_galaxy               ^|  (e) 
+	ECHO.   (5) swganh_galaxy_manager       ^|  (f) 
+	ECHO.                                   ^|  (g) 
 	ECHO.      Server Configuration         ^|
 	ECHO.                                   ^|               Help
-	ECHO.   (-) -------------------         ^|
-	ECHO.   (-) -------------------         ^|  (h) Help
-	ECHO.   (-) -------------------         ^|  (s) Stats
+	ECHO.   (-)                             ^|
+	ECHO.   (-)                             ^|  (h) Help
+	ECHO.   (-)                             ^|  (s) Stats
 	ECHO.                                   ^|
 	ECHO.                                   ^|
 	ECHO.                                   ^|
@@ -88,27 +125,29 @@ TITLE %title%
 
 IF /I '%Choice%'=='1' GOTO :DatabaseCompleteSetup 
 
-IF /I '%Choice%'=='2' GOTO :SchemaSWGANH_GALAXY 
+IF /I '%Choice%'=='2' GOTO :SchemaSWGANH_STATIC 
 
-IF /I '%Choice%'=='3' GOTO :SchemaSWGANH_GALAXY_MANAGER
+IF /I '%Choice%'=='3' GOTO :SchemaSWGANH_ASTROMECH
 
-IF /I '%Choice%'=='4' GOTO :SchemaSWGANH_ASTROMECH
+IF /I '%Choice%'=='4' GOTO :SchemaSWGANH_GALAXY
 
-IF /I '%Choice%'=='5' GOTO :SchemaSWGANH_STATIC
+IF /I '%Choice%'=='5' GOTO :SchemaSWGANH_GALAXY_MANAGER
 
-IF /I '%Choice%'=='6' GOTO :SchemaSWGANH_LOGS
+IF /I '%Choice%'=='6' GOTO :end
 
-IF /I '%Choice%'=='7' GOTO :SchemaSWGANH_STATIC
+IF /I '%Choice%'=='7' GOTO :end
 
-IF /I '%Choice%'=='8' GOTO :SchemaSWGANH_USER
+IF /I '%Choice%'=='8' GOTO :end
 
-IF /I '%Choice%'=='9' GOTO :SchemaSWGANH_UTILITY
+IF /I '%Choice%'=='9' GOTO :end
 
-IF /I '%Choice%'=='0' GOTO :ResetGlobalTimer
+IF /I '%Choice%'=='0' GOTO :end
 
-IF /I '%Choice%'=='@' GOTO :SetMOTD
+IF /I '%Choice%'=='@' GOTO :end
 
 IF /I '%Choice%'=='a' GOTO :AccountsBackup
+
+IF /I '%Choice%'=='b' GOTO :end
 
 IF /I '%Choice%'=='c' GOTO :CompleteBackup 
 
@@ -138,16 +177,37 @@ GOTO:MainMenu
 
 	:: Create the database schemas
 	
+	cd "%PROJECT_BASE%swganh_static"
+		mysql --password=%db_pass% --host=%db_host% --user=%db_user% < "create.sql"
 	cd "%PROJECT_BASE%swganh_galaxy"
 		mysql --password=%db_pass% --host=%db_host% --user=%db_user% < "create.sql"
 	cd "%PROJECT_BASE%swganh_galaxy_manager"
-		mysql --password=%db_pass% --host=%db_host% --user=%db_user% < "create.sql"
-	cd "%PROJECT_BASE%swganh_static"
 		mysql --password=%db_pass% --host=%db_host% --user=%db_user% < "create.sql"
 	cd "%PROJECT_BASE%swganh_astromech"
 		mysql --password=%db_pass% --host=%db_host% --user=%db_user% < "create.sql"
 
 	:: Populate the data
+		
+	:: (swganh_static)
+	
+	cd "%PROJECT_BASE%"
+	cd "%PROJECT_BASE%swganh_static\scripts"
+		for /F %%A IN ('dir /b "*.sql" ^| sort') do (
+			mysql --password=%db_pass% --host=%db_host% --user=%db_user% --database=swganh_static --default-character-set=utf8 < "%%A"
+		ECHO. Installing %%A [Done]
+		)
+		
+	cd "%PROJECT_BASE%swganh_static\functions"
+		for /F %%A IN ('dir /b "*.sql" ^| sort') do (
+			mysql --password=%db_pass% --host=%db_host% --user=%db_user% --database=swganh_static --default-character-set=utf8 < "%%A"
+		ECHO. Installing %%A [Done]
+		)
+		
+	cd "%PROJECT_BASE%swganh_static\procedures"
+		for /F %%A IN ('dir /b "*.sql" ^| sort') do (
+			mysql --password=%db_pass% --host=%db_host% --user=%db_user% --database=swganh_static --default-character-set=utf8 < "%%A"
+		ECHO. Installing %%A [Done]
+		)
 	
 	:: (swganh_galaxy)
 	
@@ -188,27 +248,6 @@ GOTO:MainMenu
 	cd "%PROJECT_BASE%swganh_galaxy_manager\procedures"
 		for /F %%A IN ('dir /b "*.sql" ^| sort') do (
 			mysql --password=%db_pass% --host=%db_host% --user=%db_user% --database=swganh_galaxy_manager --default-character-set=utf8 < "%%A"
-		ECHO. Installing %%A [Done]
-		)
-		
-	:: (swganh_static)
-	
-	cd "%PROJECT_BASE%"
-	cd "%PROJECT_BASE%swganh_static\scripts"
-		for /F %%A IN ('dir /b "*.sql" ^| sort') do (
-			mysql --password=%db_pass% --host=%db_host% --user=%db_user% --database=swganh_static --default-character-set=utf8 < "%%A"
-		ECHO. Installing %%A [Done]
-		)
-		
-	cd "%PROJECT_BASE%swganh_static\functions"
-		for /F %%A IN ('dir /b "*.sql" ^| sort') do (
-			mysql --password=%db_pass% --host=%db_host% --user=%db_user% --database=swganh_static --default-character-set=utf8 < "%%A"
-		ECHO. Installing %%A [Done]
-		)
-		
-	cd "%PROJECT_BASE%swganh_static\procedures"
-		for /F %%A IN ('dir /b "*.sql" ^| sort') do (
-			mysql --password=%db_pass% --host=%db_host% --user=%db_user% --database=swganh_static --default-character-set=utf8 < "%%A"
 		ECHO. Installing %%A [Done]
 		)
 		
@@ -436,7 +475,7 @@ GOTO:MainMenu
 
 	:: Backup account data
 	
-	mysqldump --password=%db_pass% --host=%db_host% --user=%db_user% swganh_galaxy account --extended-insert --create-options --dump-date --triggers --comments -r swganh_accounts.bak
+	mysqldump --password=%db_pass% --host=%db_host% --user=%db_user% swganh_galaxy_manager account --extended-insert --create-options --dump-date --triggers --comments -r swganh_accounts.bak
 
 	ECHO.                           Backup Complete
 	ECHO.
@@ -519,47 +558,6 @@ GOTO:MainMenu
 :ScreenClear
 	CLS
 	GOTO:EOF
-	
-:ScreenIntro
-	CLS
-	ECHO.
-	ECHO.                MIIIIIIIIIIIINNNNNNNNNNNNNNNDIIIIIIIINNN
-	ECHO.                MIIIIIIIIIIINNNNNNNNNNNNNNNNNNNNNIIIINNN
-	ECHO.                MIIIIIIIIONNNNNNNNN,,NNNNNNNNNNNNNNNINNN
-	ECHO.                MIIIIIIINNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
-	ECHO.                MIIIIIINNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
-	ECHO.                MIIIIIDNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
-	ECHO.                MIIIIINNNNNNN=...............NNNNNNNNNNN
-	ECHO.                MIIIIIINNNN8NNNNN......N+NNNNNN...DNNNNN
-	ECHO.                MIIIIIIONNNNNNNN~,......DNNNNNNNNN..NNNN
-	ECHO.                MIIIIIINNNNNNNN.N....... NNNNNNNNN....NN
-	ECHO.                MIIIIINNNNNNN$.NN .........NNNNNN.....NN
-	ECHO.                MIIINNNNNNNN.~NN8DNZ..................NN
-	ECHO.                MINNNNNNNNN$NNNNNNNN............MN....NN
-	ECHO.                MIINNNNNNNNNNNNN...:NN...........MN...NN
-	ECHO.                MIINNNNNNNNNNNN,..... N..........N....NN
-	ECHO.                MIINNNNNNNNNNNN.........D.............NN
-	ECHO.                MIINNNNNNNNNNN8.......................NN
-	ECHO.                MIINNNNNNNNNN ........................NN
-	ECHO.                MIINNNNNNNND...NNN..................DNNN
-	ECHO.                M8N80NNNNNNM...NNNNN................~.NN
-	ECHO.                M0000NNNNNN ..NNNNNNN.................NN
-	ECHO.                M0NNNNNNNNNN..NNNNNNN . NNN .........=NN
-	ECHO.                M000NNNNNNNNN.NNNNNNNN..NNNN........NNNN
-	ECHO.                M00NNNNNNNNNNNNNNNNNN7.............NNNNN
-	ECHO.                M0000NNNNNNNNNNNNNNNNNN?.........NNNNNNN
-	ECHO.                M0000NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
-	ECHO.                M00000000NNNNNNNNNNN..D..N..NDN.:NNM..NN
-	ECHO.                M00000000NNNNNNNN7,NN.N..N.N,,,8.Z.:NNNN
-	ECHO.                M00000000NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
-	ECHO.                M88888888888888888888888888888888888888N
-	ECHO.
-	ECHO.                     SWG:ANH - Database Installer
-	ECHO.
-	ECHO.
-	CALL:sleep 1
-	GOTO:EOF
-	
 :ShortMenu
 	CLS
 	ECHO. ----------------------------------------------------------------------
