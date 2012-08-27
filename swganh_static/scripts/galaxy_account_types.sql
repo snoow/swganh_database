@@ -34,25 +34,61 @@
 USE swganh_static;
 
 --
--- Table structure for table `draft_craft_lists`
+-- Table structure for table `galaxy_account_types`
 --
 
-DROP TABLE IF EXISTS `draft_craft_lists`;
+DROP TABLE IF EXISTS `galaxy_account_types`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `draft_craft_lists` (
-  `id` int(11) unsigned NOT NULL DEFAULT '0',
+CREATE TABLE `galaxy_account_types` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `type` char(255) NOT NULL,
+  `description` char(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=REDUNDANT;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `draft_craft_lists`
+-- Dumping data for table `galaxy_account_types`
 --
 
-LOCK TABLES `draft_craft_lists` WRITE;
-/*!40000 ALTER TABLE `draft_craft_lists` DISABLE KEYS */;
-/*!40000 ALTER TABLE `draft_craft_lists` ENABLE KEYS */;
+LOCK TABLES `galaxy_account_types` WRITE;
+/*!40000 ALTER TABLE `galaxy_account_types` DISABLE KEYS */;
+INSERT INTO `galaxy_account_types` VALUES (1,'charactercreation','Character Creation'),
+(2,'newbietutorial','Newbie Tutorial'),
+(3,'customerservice','Customer Service'),
+(4,'missionsystemdynamic','Dynamic Mission System'),
+(5,'missionsystemplayer','Player Mission System'),
+(6,'bountysystem','Bounty Mission System'),
+(7,'cloningsystem','Cloning System'),
+(8,'insurancesystem','Insurance System'),
+(9,'travelsystem','Galactic Travel Commission'),
+(10,'shippingsystem','Galactic Shipping Commission'),
+(11,'bazaarsystem','Galactic Trade Commission'),
+(12,'dispensersystem','Dispenser System'),
+(13,'skilltrainingsystem','Skill Training Union'),
+(14,'rebelfaction','Rebellion'),
+(15,'imperialfaction','the Empire'),
+(16,'jabbaspalace','Jabba the Hutt'),
+(17,'poisystem','POI System'),
+(18,'corpseexpiraton','Corpse Expiration Tracking'),
+(19,'testing','Testing'),
+(20,'structuremaintenance','Structure Maintenance'),
+(21,'tipsurcharge','Tip Surcharge'),
+(23,'npcloot','NPC Loot'),
+(24,'junkdealer','Junk Dealer'),
+(25,'cantinadrink','Cantina Drink'),
+(26,'betatest','Beta Test Fund'),
+(27,'badgegroupcoinsplit','Group Split Error Account'),
+(28,'gamblingslotstandard','Standard Slot Machine Account'),
+(29,'gamblingroulette','Roulette Account'),
+(30,'gamblingcardsabacc','Sabacc Account'),
+(31,'vehiclerepairs','Vehicle Repair System'),
+(32,'relicdealer','Relic Dealer'),
+(33,'newplayerquests','New Player Quests'),
+(34,'fines','Contraband Scanning Fines'),
+(35,'bank','Bank');
+/*!40000 ALTER TABLE `galaxy_account_types` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
