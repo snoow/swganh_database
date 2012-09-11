@@ -34,32 +34,44 @@
 USE swganh_galaxy_manager;
 
 --
--- Table structure for table `galaxy_account`
+-- Definition for stored procedure `sp_AdminShowSchemaTables`
 --
 
-DROP TABLE IF EXISTS `galaxy_account`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `galaxy_account` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `galaxy_id` bigint(20) unsigned NOT NULL,
-  `account_type` bigint(20) unsigned NOT NULL,
-  `account_credits` bigint(20) unsigned NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `galaxy_account_type` (`account_type`),
-  CONSTRAINT `galaxy_account_type` FOREIGN KEY (`account_type`) REFERENCES `swganh_static.galaxy_account_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+CREATE PROCEDURE `sp_AdminShowSchemaTables`( IN dbname CHAR(64) )
+BEGIN
 
---
--- Dumping data for table `galaxy_account`
---
+  -- ---------------------------------------------------------------------------------------
+  -- This source file is part of SWG:ANH (Star Wars Galaxies - A New Hope - Server Emulator)
+  --
+  -- For more information, visit http://www.swganh.com
+  --
+  -- Copyright (c) 2006 - 2012 The SWG:ANH Team
+  -- ---------------------------------------------------------------------------------------
+  -- This library is free software; you can redistribute it and/or
+  -- modify it under the terms of the GNU Lesser General Public
+  -- License as published by the Free Software Foundation; either
+  -- version 2.1 of the License, or (at your option) any later version.
+  --
+  -- This library is distributed in the hope that it will be useful,
+  -- but WITHOUT ANY WARRANTY; without even the implied warranty of
+  -- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  -- Lesser General Public License for more details.
+  --
+  -- You should have received a copy of the GNU Lesser General Public
+  -- License along with this library; if not, write to the Free Software
+  -- Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+  -- ---------------------------------------------------------------------------------------
 
-LOCK TABLES `galaxy_account` WRITE;
-/*!40000 ALTER TABLE `galaxy_account` DISABLE KEYS */;
-/*!40000 ALTER TABLE `galaxy_account` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+  SELECT
+    table_name,
+    engine,
+    version,
+    table_collation AS collation,
+    table_rows AS rows
+  FROM information_schema.tables
+  WHERE table_schema = dbname;
+
+END;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

@@ -41,14 +41,13 @@ DROP TABLE IF EXISTS `character_skills`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `character_skills` (
-  `character_id` bigint(20) unsigned NOT NULL DEFAULT '0' COMMENT 'Character ID',
-  `skill_id` int(11) unsigned NOT NULL DEFAULT '0' COMMENT 'Skill ID',
+  `character_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `skill_id` int(11) unsigned NOT NULL,
   PRIMARY KEY (`character_id`,`skill_id`),
-  KEY `skills_character_id` (`character_id`),
-  KEY `skill_id` (`skill_id`),
-  CONSTRAINT `skill_character_id` FOREIGN KEY (`character_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `skill_id` FOREIGN KEY (`skill_id`) REFERENCES `swganh_static`.`skills` (`skill_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Character Skills';
+  KEY `FK_character_skills_swganh_static.skill_id` (`skill_id`),
+  CONSTRAINT `FK_character_skills_character_id` FOREIGN KEY (`character_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_character_skills_swganh_static.skill_id` FOREIGN KEY (`skill_id`) REFERENCES `swganh_static`.`skills` (`skill_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

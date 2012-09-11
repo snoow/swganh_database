@@ -46,7 +46,6 @@ CREATE TABLE `account` (
   `email` varchar(128) NOT NULL DEFAULT '',
   `password` varchar(128) NOT NULL DEFAULT '',
   `session_key` varchar(128) NOT NULL DEFAULT '',
-  `csr` int(10) unsigned NOT NULL DEFAULT '0',
   `enabled` int(10) unsigned NOT NULL DEFAULT '0',
   `locked` int(10) unsigned NOT NULL DEFAULT '0',
   `expired` int(10) unsigned NOT NULL DEFAULT '0',
@@ -54,7 +53,7 @@ CREATE TABLE `account` (
   `created_at` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

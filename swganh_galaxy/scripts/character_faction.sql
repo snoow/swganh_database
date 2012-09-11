@@ -41,14 +41,14 @@ DROP TABLE IF EXISTS `character_faction`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `character_faction` (
-  `character_id` bigint(20) unsigned NOT NULL COMMENT 'Character ID',
-  `faction_id` int(11) unsigned NOT NULL COMMENT 'Faction ID',
-  `value` int(11) NOT NULL COMMENT 'Faction Standing',
+  `character_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `faction_id` int(11) unsigned NOT NULL DEFAULT '0',
+  `value` int(11) DEFAULT '0',
   PRIMARY KEY (`character_id`,`faction_id`),
-  KEY `factions_faction_id` (`faction_id`),
-  CONSTRAINT `factions_character_id` FOREIGN KEY (`character_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `factions_faction_id` FOREIGN KEY (`faction_id`) REFERENCES `swganh_static`.`faction` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Character Faction Lists';
+  KEY `FK_character_faction_swganh_static.faction_id` (`faction_id`),
+  CONSTRAINT `FK_character_faction_characters` FOREIGN KEY (`character_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_character_faction_swganh_static.faction_id` FOREIGN KEY (`faction_id`) REFERENCES `swganh_static`.`faction` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

@@ -41,9 +41,10 @@ DROP TABLE IF EXISTS `character_guild`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `character_guild` (
-  `character_id` bigint(20) unsigned NOT NULL,
-  `guild_id` bigint(20) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`character_id`)
+  `character_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `guild_id` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`character_id`),
+  CONSTRAINT `FK_character_guild_characters` FOREIGN KEY (`character_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

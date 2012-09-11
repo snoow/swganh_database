@@ -41,12 +41,12 @@ DROP TABLE IF EXISTS `character_ignorelist`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `character_ignorelist` (
-  `character_id` bigint(20) unsigned NOT NULL,
-  `ignore_id` bigint(20) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`character_id`,`ignore_id`),
-  KEY `ignorelist_ignore_id` (`ignore_id`),
-  CONSTRAINT `ignorelist_character_id` FOREIGN KEY (`character_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `ignorelist_ignore_id` FOREIGN KEY (`ignore_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  `character_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `friend_id` bigint(20) unsigned NOT NULL,
+  PRIMARY KEY (`character_id`),
+  KEY `FK_character_ignorelist_friend_id` (`friend_id`),
+  CONSTRAINT `FK_character_ignorelist_character_id` FOREIGN KEY (`character_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_character_ignorelist_friend_id` FOREIGN KEY (`friend_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

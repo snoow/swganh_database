@@ -34,38 +34,22 @@
 USE swganh_galaxy;
 
 --
--- Table structure for table `items`
+-- Table structure for table `character_biographies`
 --
 
-DROP TABLE IF EXISTS `items`;
+DROP TABLE IF EXISTS `character_biographies`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `items` (
-  `id` bigint(20) unsigned NOT NULL COMMENT 'Item ID',
-  `parent_id` bigint(20) unsigned NOT NULL COMMENT 'Item Owner',
-  `item_family` int(11) unsigned NOT NULL COMMENT 'Item Family Type',
-  `item_type` int(11) unsigned NOT NULL COMMENT 'Item Type',
-  `planet_id` int(11) unsigned NOT NULL COMMENT 'Planet ID',
-  `x` float unsigned NOT NULL COMMENT 'x',
-  `y` float unsigned NOT NULL COMMENT 'y',
-  `z` float unsigned NOT NULL COMMENT 'z',
-  `oX` float unsigned NOT NULL COMMENT 'Orientation X',
-  `oY` float unsigned NOT NULL COMMENT 'Orientation Y',
-  `oZ` float unsigned NOT NULL COMMENT 'Orientation Z',
-  `oW` float unsigned NOT NULL COMMENT 'Orientation W',
-  `condition_damage` int(10) unsigned NOT NULL COMMENT 'Item Damage',
-  `condition_max` int(10) unsigned NOT NULL COMMENT 'Item Condition Max',
-  `custom_name` varchar(255) DEFAULT NULL COMMENT 'Item Custom Name',
-  PRIMARY KEY (`id`),
-  KEY `FK_items_swganh_static.item_families` (`item_family`),
-  KEY `FK_items_swganh_static.item_types` (`item_type`),
-  CONSTRAINT `FK_items_swganh_static.item_families` FOREIGN KEY (`item_family`) REFERENCES `swganh_static`.`item_families` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `FK_items_swganh_static.item_types` FOREIGN KEY (`item_type`) REFERENCES `swganh_static`.`item_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+CREATE TABLE `character_biographies` (
+  `character_id` bigint(20) unsigned NOT NULL,
+  `biography` text,
+  PRIMARY KEY (`character_id`),
+  CONSTRAINT `FK_character_biographies_characters` FOREIGN KEY (`character_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `items`
+-- Dumping data for table `character_biographies`
 --
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

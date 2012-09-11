@@ -41,14 +41,18 @@ DROP TABLE IF EXISTS `character_appearance`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `character_appearance` (
-  `character_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `scale` int(10) unsigned NOT NULL DEFAULT '0',
+  `character_id` bigint(20) unsigned NOT NULL,
+  `scale` int(11) unsigned NOT NULL DEFAULT '0',
   `customization` blob NOT NULL,
-  `hail_model` varchar(64) DEFAULT NULL,
+  `hair_model` int(11) unsigned NOT NULL,
+  `hair_id` bigint(20) unsigned NOT NULL,
   `customization_hair` blob NOT NULL,
+  `mood_id` int(11) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`character_id`),
-  CONSTRAINT `appearance_character_id` FOREIGN KEY (`character_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=8589938494 DEFAULT CHARSET=utf8;
+  KEY `FK_character_appearance_swganh_static.mood_type` (`mood_id`),
+  CONSTRAINT `character_appearance_character_id` FOREIGN KEY (`character_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_character_appearance_swganh_static.mood_type` FOREIGN KEY (`mood_id`) REFERENCES `swganh_static`.`moods` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

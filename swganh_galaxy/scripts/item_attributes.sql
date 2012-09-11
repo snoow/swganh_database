@@ -41,16 +41,17 @@ DROP TABLE IF EXISTS `item_attributes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `item_attributes` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
-  `item_id` bigint(20) unsigned NOT NULL DEFAULT '0' COMMENT 'Item ID',
-  `attribute_id` int(11) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute ID',
-  `value` varchar(255) NOT NULL DEFAULT '""' COMMENT 'Attribute Value',
-  `order` int(11) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Order',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'Item Attribute ID',
+  `item_id` bigint(20) unsigned DEFAULT NULL COMMENT 'Item ID',
+  `attribute_id` int(11) unsigned NOT NULL COMMENT 'Attribute Type ID (swganh_static)',
+  `attribute_value` varchar(255) DEFAULT NULL COMMENT 'Attribute Value',
+  `attribute_order` int(10) NOT NULL COMMENT 'Attribute Display Order',
   PRIMARY KEY (`id`),
-  KEY `item_attribute_id` (`attribute_id`),
-  KEY `item_type_id` (`item_id`),
-  CONSTRAINT `item_attribute_id` FOREIGN KEY (`attribute_id`) REFERENCES `swganh_static`.`attributes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=926 DEFAULT CHARSET=utf8 ROW_FORMAT=REDUNDANT;
+  KEY `FK_item_attributes_items` (`item_id`),
+  KEY `FK_item_attributes_swganh_static.attributes` (`attribute_id`),
+  CONSTRAINT `FK_item_attributes_items` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_item_attributes_swganh_static.attributes` FOREIGN KEY (`attribute_id`) REFERENCES `swganh_static`.`attributes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=596 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

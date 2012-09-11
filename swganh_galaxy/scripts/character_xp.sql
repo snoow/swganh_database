@@ -41,14 +41,14 @@ DROP TABLE IF EXISTS `character_xp`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `character_xp` (
-  `character_id` bigint(20) unsigned NOT NULL COMMENT 'Character ID',
-  `xp_type_id` int(11) unsigned NOT NULL COMMENT 'Profession XP Type',
-  `value` int(11) unsigned NOT NULL COMMENT 'XP Value',
-  KEY `xp_character_id` (`character_id`),
-  KEY `xp_type` (`xp_type_id`),
-  CONSTRAINT `xp_character_id` FOREIGN KEY (`character_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `xp_type` FOREIGN KEY (`xp_type_id`) REFERENCES `swganh_static`.`xp_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Character XP';
+  `character_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `xp_type_id` int(11) unsigned NOT NULL,
+  `value` int(11) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`character_id`,`xp_type_id`),
+  KEY `FK_character_xp_swganh_static.xp_type_id` (`xp_type_id`),
+  CONSTRAINT `FK_character_xp_character_id` FOREIGN KEY (`character_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_character_xp_swganh_static.xp_type_id` FOREIGN KEY (`xp_type_id`) REFERENCES `swganh_static`.`xp_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

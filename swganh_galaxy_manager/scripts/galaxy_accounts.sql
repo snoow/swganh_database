@@ -31,35 +31,35 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-USE swganh_galaxy;
+USE swganh_galaxy_manager;
 
 --
--- Table structure for table `character_movement`
+-- Table structure for table `galaxy_accounts`
 --
 
-DROP TABLE IF EXISTS `character_movement`;
+DROP TABLE IF EXISTS `galaxy_accounts`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `character_movement` (
-  `character_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `accelleration_base` double NOT NULL DEFAULT '0',
-  `accelleration_modifier` double NOT NULL DEFAULT '0',
-  `speed_base` double NOT NULL DEFAULT '0',
-  `speed_modifier` double NOT NULL DEFAULT '0',
-  `run_speed` double NOT NULL DEFAULT '0',
-  `slope_modifier_angle` double NOT NULL DEFAULT '0',
-  `slope_modifier_percent` double NOT NULL DEFAULT '0',
-  `turn_radius` double NOT NULL DEFAULT '0',
-  `walking_speed` double NOT NULL DEFAULT '0',
-  `water_modifier_percent` double NOT NULL DEFAULT '0',
-  PRIMARY KEY (`character_id`),
-  CONSTRAINT `movement_character_id` FOREIGN KEY (`character_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=8589938494 DEFAULT CHARSET=latin1;
+CREATE TABLE `galaxy_accounts` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `galaxy_id` bigint(20) unsigned NOT NULL,
+  `account_type` bigint(20) unsigned NOT NULL,
+  `account_credits` bigint(20) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `galaxy_account_type` (`account_type`),
+  CONSTRAINT `galaxy_account_type` FOREIGN KEY (`account_type`) REFERENCES `swganh_static.galaxy_account_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `character_movement`
+-- Dumping data for table `galaxy_accounts`
 --
+
+LOCK TABLES `galaxy_account` WRITE;
+/*!40000 ALTER TABLE `galaxy_account` DISABLE KEYS */;
+/*!40000 ALTER TABLE `galaxy_account` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
@@ -69,4 +69,4 @@ CREATE TABLE `character_movement` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-27  9:42:58
+-- Dump completed on 2012-08-27  9:44:09

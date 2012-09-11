@@ -41,13 +41,13 @@ DROP TABLE IF EXISTS `character_badges`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `character_badges` (
-  `character_id` bigint(20) unsigned NOT NULL DEFAULT '0' COMMENT 'Character ID',
-  `badge_id` int(11) unsigned NOT NULL DEFAULT '0' COMMENT 'Badge ID',
-  PRIMARY KEY (`character_id`,`badge_id`),
-  KEY `badges_badge_id` (`badge_id`),
-  CONSTRAINT `badges_badge_id` FOREIGN KEY (`badge_id`) REFERENCES `swganh_static`.`badges` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `badges_character_id` FOREIGN KEY (`character_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Character Badge Lists';
+  `character_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `badge_id` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`character_id`),
+  KEY `FK_character_badges_swganh_static.badge_types` (`badge_id`),
+  CONSTRAINT `FK_character_badges_swganh_static.badge_types` FOREIGN KEY (`badge_id`) REFERENCES `swganh_static`.`badge_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_character_badges_character_id` FOREIGN KEY (`character_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

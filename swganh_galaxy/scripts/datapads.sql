@@ -42,8 +42,13 @@ DROP TABLE IF EXISTS `datapads`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `datapads` (
   `id` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `datapad_type` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
+  `parent_id` bigint(20) unsigned NOT NULL,
+  `datapad_type` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_datapads_owner_id` (`parent_id`),
+  KEY `FK_datapads_swganh_static.datapad_type` (`datapad_type`),
+  CONSTRAINT `FK_datapads_swganh_static.datapad_type` FOREIGN KEY (`datapad_type`) REFERENCES `swganh_static`.`object_models` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_datapads_owner_id` FOREIGN KEY (`parent_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

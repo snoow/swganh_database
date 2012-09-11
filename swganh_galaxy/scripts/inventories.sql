@@ -41,10 +41,14 @@ DROP TABLE IF EXISTS `inventories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `inventories` (
-  `id` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `inventory_type` int(11) unsigned NOT NULL DEFAULT '1',
-  `credits` int(11) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
+  `id` bigint(20) unsigned NOT NULL,
+  `parent_id` bigint(20) unsigned NOT NULL,
+  `inventory_type` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_inventories_swganh_static.inventory_type` (`inventory_type`),
+  KEY `FK_inventories_owner_id` (`parent_id`),
+  CONSTRAINT `FK_inventories_owner_id` FOREIGN KEY (`parent_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_inventories_swganh_static.inventory_type` FOREIGN KEY (`inventory_type`) REFERENCES `swganh_static`.`object_models` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

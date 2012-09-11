@@ -34,22 +34,24 @@
 USE swganh_galaxy;
 
 --
--- Table structure for table `banks`
+-- Table structure for table `character_credits`
 --
 
-DROP TABLE IF EXISTS `banks`;
+DROP TABLE IF EXISTS `character_credits`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `banks` (
-  `id` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `credits` int(11) unsigned NOT NULL DEFAULT '0',
-  `planet_id` int(2) NOT NULL DEFAULT '-1',
-  PRIMARY KEY (`id`)
+CREATE TABLE `character_credits` (
+  `character_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `bank_id` bigint(20) DEFAULT NULL,
+  `credits_cash` bigint(20) DEFAULT NULL,
+  `credits_bank` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`character_id`),
+  CONSTRAINT `FK_character_credits_character_id` FOREIGN KEY (`character_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `banks`
+-- Dumping data for table `character_credits`
 --
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
